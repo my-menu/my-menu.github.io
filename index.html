@@ -1,64 +1,63 @@
 <!DOCTYPE html>
 <html>
-  <head>
-  
-  <SCRIPT language="JavaScript">
-var browserName=navigator.appName; 
-if (browserName=="Microsoft Internet Explorer")
- {
-  window.location="index_ie.html";
- }
-</SCRIPT>
-
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<head>
+  	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icon-ipad.png" />
     <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icon-iphone4.png" />
 	<link rel="icon" href="http://mymenu.me/favicon.ico" type="image/x-icon" />
 	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
-    <link rel="shortcut icon" type="image/x-png" href="favicon.png">   
+    <link rel="shortcut icon" type="image/x-png" href="favicon.png">
 	<title>my menu</title>
     
-<script type="text/javascript">
-if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
-   if (document.cookie.indexOf("iphone_redirect=false") == -1) window.location = "index_iphone.html";
-}
-</script>
+    <!-- Open Graph -->
+    <meta property="og:title" content="my menu"/>
+    <meta property="og:image" content="http://mymenu.me/og_image.jpg"/>
+    <meta property="og:description" content='Share your Yummy story. My Menu is Social Menu Application.'/>
+    <meta property="og:url" content="http://mymenu.me"/>
 
-<script type="text/javascript">
-if((navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
-   if (document.cookie.indexOf("ipad_redirect=false") == -1) window.location = "index_ipad.html";
-}
-</script>
+	<script type="text/javascript">
+		var browserName=navigator.appName; 
+		if (browserName=="Microsoft Internet Explorer")
+		 {
+		  window.location="index_ie.html";
+		 }
 
+		if((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+		   if (document.cookie.indexOf("iphone_redirect=false") == -1) window.location = "index_iphone.html";
+		}
 
+		if((navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i))) {
+		   if (document.cookie.indexOf("ipad_redirect=false") == -1) window.location = "index_ipad.html";
+		}
 
+		window.addEventListener('load', setOrientation, false);
+		window.addEventListener('orientationchange', setOrientation, false);
+		function setOrientation() {
+			var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait'; 
+			var cl = document.body.className;
+			cl = cl.replace(/portrait|landscape/, orient);
+			document.body.className = cl;
+		 	////<body class="portrait">
+		}
+	</script>
 
-<style type="text/css">
-    * {
-        -webkit-touch-callout: none;
-		 -webkit-tap-highlight-color: rgba(0,0,0,0);
-        -webkit-user-select: none;
+	<style type="text/css">
+	    * {
+	        -webkit-touch-callout: none;
+			 -webkit-tap-highlight-color: rgba(0,0,0,0);
+	        -webkit-user-select: none;
+	    }
+		.instructions {
+	        -webkit-user-select: text;  /* select */
+	    }
 		
-    }
-	.instructions {
-        -webkit-user-select: text;  /* select */
-    }
-	
-</style>
-
-
-
-	<style type="text/css" media="all">
-	
-	
-	html {
-	
-	background: url(images/index_bg.png) repeat;
-	border-top:1px solid rgba(255,255,255,0.5);		
-	}
-
+		html {
+			background: url(images/index_bg.png) repeat;
+			border-top:1px solid rgba(255,255,255,0.5);		
+		}
+		
 		body {
 			height: 100%;
 			width: 100%;
@@ -67,122 +66,92 @@ if((navigator.userAgent.match(/iPad/i)) || (navigator.userAgent.match(/iPod/i)))
 			-webkit-tap-highlight-color: rgba(0,0,0,0);
 			z-index:1;
 			overflow-x: auto;
-			overflow-y: auto;
-
-	
+			overflow-y: auto;		
 		}
-	
-	
-	
-	span.title {
-		color:#f0f0f0;
-	font-size:24px;
-	font-family:Helvetica Neue;
-	font-weight:bold;
-	text-shadow:0 -1px 0 rgba(0,0,0,0.50);
-	line-height:240%;
-	}
-	span.text {
-	color:#779ba2;
-	font-size:16px;
-	font-family:Helvetica Neue;
-	font-weight:Medium;
-	text-shadow:0 1px 0 rgba(255,255,255,0.75);
-	line-height:190%;
-	}
 		
-	
-#bg {
-        position:fixed;
-        top:-50%;
-        left:-50%;
-        width:200%;
-        height:200%;
-		z-index:2;
-}
-#bg img {
-        position:absolute;
-        top:0;
-        left:0;
-        right:0;
-        bottom:0;
-        margin:auto;
-        min-width:50%;
-        min-height:50%;
-}
+		span.title {
+			color:#f0f0f0;
+			font-size:24px;
+			font-family:Helvetica Neue;
+			font-weight:bold;
+			text-shadow:0 -1px 0 rgba(0,0,0,0.50);
+			line-height:240%;
+		}
+		span.text {
+			color:#779ba2;
+			font-size:16px;
+			font-family:Helvetica Neue;
+			font-weight:Medium;
+			text-shadow:0 1px 0 rgba(255,255,255,0.75);
+			line-height:190%;
+		}
 		
-	
+		#bg {
+	        position:fixed;
+	        top:-50%;
+	        left:-50%;
+	        width:200%;
+	        height:200%;
+			z-index:2;
+		}
+		#bg img {
+	        position:absolute;
+	        top:0;
+	        left:0;
+	        right:0;
+	        bottom:0;
+	        margin:auto;
+	        min-width:50%;
+	        min-height:50%;
+		}
 		
-	
-		
-.hhh {
-}
+		.portrait .hhh {
+			display:none;
+		}
 
-.vvv {
-}
+		.landscape .vvv {
+			display:none;
+		}
 
-.portrait .hhh {
-	display:none;
-}
+		.portrait #center {
+			top: 28%;
+			left: 50%;
+		}
 
-.landscape .vvv {
-	display:none;
-}
+		.landscape #center {
+			top: 32%;
+			left: 50%;
+		}
 
- 
-.portrait #center {
-	top: 28%;
-	left: 50%;
-}
-
-.landscape #center {
-	top: 32%;
-	left: 50%;
-}
-
-#ci {
-	width:60px;
-	height:60px;
-	background-image:url(images/index_ci.png);
-	position:fixed;
-	margin:-30px 0 0 -30px;
-	left:104px;
-	top:90%;
-	z-index:3;
-}
-
-
-</style>
-	
-	<script type="text/javascript">
-  window.addEventListener('load', setOrientation, false);
-  window.addEventListener('orientationchange', setOrientation, false);
- function setOrientation() {
-    var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait'; 
-    var cl = document.body.className;
-    cl = cl.replace(/portrait|landscape/, orient);
-    document.body.className = cl;
- ////<body class="portrait">
-  }
-</script> 
-
-  </head>
-  <body class="landscape">
-  <div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) {return;}
-  js = d.createElement(s); js.id = id;
-  js.src = "http://connect.facebook.net/ko_KR/all.js#xfbml=1&appId=286613638027558";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-
- <div id="bg">
-        <img src="images/index_grad.png" alt="">
-</div>
-<div id="indexhype_hype_container" style="position:relative;overflow:auto;width:960px;height:1080px;z-index:9000;">
+		#ci {
+			width:60px;
+			height:60px;
+			background-image:url(images/index_ci.png);
+			position:fixed;
+			margin:-30px 0 0 -30px;
+			left:104px;
+			top:90%;
+			z-index:3;
+		}
+	</style>
+</head>
+<body class="landscape">
+	<div id="fb-root"></div>
+	<script>
+		(function(d, s, id) {
+		  var js, fjs = d.getElementsByTagName(s)[0];
+		  if (d.getElementById(id)) {return;}
+		  js = d.createElement(s); js.id = id;
+		  js.src = "http://connect.facebook.net/ko_KR/all.js#xfbml=1&appId=286613638027558";
+		  fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+	</script>
+	<div id="bg">
+		<img src="images/index_grad.png" alt="">
+	</div>
+	<div id="indexhype_hype_container" style="position:relative;overflow:auto;width:960px;height:1080px;z-index:9000;">
 		<script type="text/javascript" charset="utf-8" src="index_hype_Resources/indexhype_hype_generated_script.js"></script>
 	</div>
 
-  </body>
+</body>
 </html>
