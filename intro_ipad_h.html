@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="chrome=1,IE=9" />
+	<meta name="viewport" content="minimum-scale=1.0; maximum-scale=1.0; user-scalable=no; initial-scale=1.0; width=device-width;" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="touch-icon-ipad.png" />
+    <link rel="apple-touch-icon-precomposed" href="touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="touch-icon-iphone4.png" />
+
+<link rel="apple-touch-startup-image" href="images/splash-ipad-h.png" media="screen and (min-device-width: 481px) and (max-device-width: 1024px) and (orientation:landscape)" />
+<link rel="apple-touch-startup-image" href="images/splash-ipad-v.png">
+
+<link rel="icon" href="http://mymenu.me/favicon.ico" type="image/x-icon" />
+	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" type="image/x-png" href="favicon.png">   
+        
+<!--web app popup-->
+<link rel="stylesheet" href="add2home.css">
+<script type="application/javascript" src="add2home.js"></script>
+
+<script type="text/javascript">
+if ('standalone' in navigator && !navigator.standalone && (/iphone|ipod|ipad/gi).test(navigator.platform) && (/Safari/i).test(navigator.appVersion)) {
+	document.write('<link rel="stylesheet" href="add2home.css">');
+	document.write('<script type="application/javascript" src="add2home.js"><\/s' + 'cript>');
+}
+</script>
+
+	<title>My Menu</title>
+    
+    
+<style type="text/css">
+    * {
+        -webkit-touch-callout: none;
+		 -webkit-tap-highlight-color: rgba(0,0,0,0);
+        -webkit-user-select: none;
+		
+		
+    }
+	.instructions {
+        -webkit-user-select: text;  /* select */
+    }
+	
+</style>
+
+<script>
+ function BlockMove(event) {
+  // Tell Safari not to move the window.  body, div  add this < ontouchmove="BlockMove(event);" >
+  event.preventDefault() ;
+ }
+</script>
+
+	<style type="text/css" media="all">
+	html {
+		
+	}
+
+		body {
+			background-color: #84D0DE;
+			height: 100%;
+			width: 100%;
+			margin: 0px;
+			padding: 0;
+			-webkit-tap-highlight-color: rgba(0,0,0,0);
+			z-index:1;
+			overflow-x: hidden;
+			overflow-y: hidden;
+
+	
+		}
+	
+<!-- iPad Landscape/Portrait changer -->
+
+.hhh { /*landscape object class*/}
+.vvv { /*portrait object class*/}
+.portrait .hhh { 
+	display:none;
+	left:1024px;
+	top:1024px;
+	z-index:0;
+} 
+
+.landscape .vvv { 
+	display:none;
+	left:1024px;
+	top:1024px;
+	z-index:0;
+}
+
+
+<!-- center contents --> 
+#center {
+	 z-index:10;
+	 margin:0px;
+	 padding:0px;
+	 position:fixed;
+ }
+.portrait #center {
+	width: 768px;
+	height: 1004px;
+}
+.landscape #center {
+	width: 1024px;
+	height: 748px;
+}
+
+
+<!--bt hover -->
+.bt {
+opacity: 1;
+  /*-webkit-transition: opacity 1s linear*/
+}
+.bt:hover {
+	opacity: 0.5;
+}
+
+</style>
+
+<!--landscape web view : change portrait to landscape-->
+<script type="text/javascript">
+  window.addEventListener('load', setOrientation, false);
+  window.addEventListener('orientationchange', setOrientation, false);
+ function setOrientation() {
+    var orient = Math.abs(window.orientation) === 90 ? 'portrait' : 'landscape'; 
+    var cl = document.body.className;
+    cl = cl.replace(/landscape|portrait/, orient);
+    document.body.className = cl;
+ ////<body class="portrait">
+  }
+</script> 
+
+
+</head>
+
+
+<body class="landscape" ontouchmove="BlockMove(event);">
+
+<div id="center">
+   	<div id="introipadhype_hype_container" style="position:fixed;overflow:hidden;width:1024px;height:1004px;z-index:100;">
+		<script type="text/javascript" charset="utf-8" src="intro_ipad_hype_Resources/introipadhype_hype_generated_script.js"></script>
+	</div>
+  </div>
+
+  </body>
+</html>

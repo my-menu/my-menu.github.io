@@ -1,0 +1,89 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"> 
+<head> 
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" /> 
+<title>Simple Javascript Digital Clock</title> 
+<style type="text/css" media="all"> 
+.frm { 
+    font-family: Helvetica Neue; 
+    font-size: 14px; 
+    font-weight:500; 
+    color: #C6C6C6;
+	background-color:#000;
+	border-style:none;
+	text-align:center;
+	position:absolute;
+	bottom:0px;
+	left:50%;
+	width:200px;
+	height:18px;
+	margin: -9px 0 0 -100px;/*height/2, 0, 0, width/2*/
+	z-index:3;
+} 
+
+#bar {
+	background-color:#000;
+	height:20px;
+	width:100%;
+	position:absolute;
+	bottom:0px;	
+	font-family: Helvetica Neue; 
+    font-size: 14px; 
+    font-weight: bold; 
+    color: #C6C6C6;
+	z-index:2;
+}
+#batt {
+	height:20px;
+	width:27px;
+	position:absolute;
+	bottom:0px;
+	right:0px;
+	background-image:url(images/iphone_statusbar_right.png);
+	z-index:3;
+}
+#wifi {
+	height:20px;
+	width:70px;
+	position:absolute;
+	bottom:0px;
+	left:0px;
+	background-image:url(images/iphone_statusbar_left.png);
+	z-index:3;
+}
+</style> 
+
+</head> 
+
+<body> 
+
+
+<div id="batt"></div>
+<div id="wifi"></div>
+<div id="bar">
+<FORM NAME = "clockForm"> 
+  <INPUT TYPE="text" NAME = "clock" SIZE = "10" class="frm"> 
+</FORM>
+</div>
+<SCRIPT LANGUAGE="JavaScript"> 
+  <!-- 
+  
+  function display() { 
+    var Today = new Date(); 
+    var hours = Today.getHours(); 
+    var min = Today.getMinutes(); 
+    var sec = Today.getSeconds(); 
+    var Time = ((hours > 12) ? hours - 12 :(hours == 0) ? 12 :hours); 
+    Time += ((min < 10) ? ":0" : ":") + min;
+    Time += (hours >= 12) ? " PM" : " AM"; 
+    this.clockForm.clock.value = Time; 
+    setTimeout("display()",1000); 
+  } 
+
+  display(); 
+
+  --> 
+</SCRIPT> 
+
+</body> 
+</html>

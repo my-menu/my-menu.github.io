@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<style type="text/css" media="all"> 
+#frame {
+	width:100%;
+	height:174px;
+	position:absolute;
+	top:0px;
+	background-image:url(images/ipad_web_frame_8_v.png);
+	background-repeat:repeat-x;
+	z-index:3;
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+body {
+	background-image:url(images/index_bg_webview.png);
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#copyright {
+	background-image:url(images/ipad_web_copyright.png);
+	background-repeat:no-repeat;
+	width:240px;
+	height:100px;
+	overflow-x: hidden;
+	overflow-y: hidden;
+	position:absolute;
+	left:50%;
+	top:160px;
+	margin: 0px 0 0 -120px;/*height/2, 0, 0, width/2*/
+	z-index:2;
+	}
+#home {
+	background-image:url(images/ipad_web_frame_home_v.png);
+	z-index:4;
+	background-repeat:no-repeat;
+	position:absolute;
+	width:78px;
+	height:102px;
+	left:50%;
+	top:0px;
+	margin: 0 0 0 -39px;/*height/2, 0, 0, width/2*/
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+#home:hover {
+	opacity: 0.5;
+}
+</style>
+
+
+</head>
+<div id="frame"></div>
+<div id="copyright"></div>
+<div id="home"></div>
+<body>
+</body>
+</html>

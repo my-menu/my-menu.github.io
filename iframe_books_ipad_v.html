@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<title>My Menu</title>
+<link href="iframe_books_ipad.css" rel="stylesheet" type="text/css" media="all" />
+<script type="text/javascript">
+  // tool bar hide
+  window.addEventListener('load', function(){
+    setTimeout(scrollTo, 0, 0, 1);
+  }, false);
+  </script>
+  
+  <!-- iScroll -->
+<script type="text/javascript" src="iscroll.js?v3.7.1"></script>
+
+<script type="text/javascript">
+var myScroll;
+var a = 0;
+function loaded() {
+	setHeight();	// Set the wrapper height. Not strictly needed, see setHeight() function below.
+
+	// Please note that the following is the only line needed by iScroll to work. Everything else here is to make this demo fancier.
+	myScroll = new iScroll('scroller', {desktopCompatibility:true});
+}
+
+// Change wrapper height based on device orientation. Not strictly needed by iScroll, you may also use pure CSS techniques.
+function setHeight() {
+	var headerH = document.getElementById('header').offsetHeight,
+		footerH = document.getElementById('footer').offsetHeight,
+		wrapperH = window.innerHeight - headerH - footerH;
+	document.getElementById('wrapper').style.height = wrapperH + 'px';
+}
+
+// Check screen size on orientation change
+window.addEventListener('onorientationchange' in window ? 'orientationchange' : 'resize', setHeight, false);
+
+// Prevent the whole screen to scroll when dragging elements outside of the scroller (ie:header/footer).
+// If you want to use iScroll in a portion of the screen and still be able to use the native scrolling, do *not* preventDefault on touchmove.
+document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
+
+// Load iScroll when DOM content is ready.
+document.addEventListener('DOMContentLoaded', loaded, false);
+</script>
+
+<style type="text/css" src="iframe_book_ipad.css">
+</style>
+ 
+ 
+  
+<!--landscape view
+
+<script type="text/javascript">
+  window.addEventListener('load', setOrientation, false);
+  window.addEventListener('orientationchange', setOrientation, false);
+ function setOrientation() {
+    var orient = Math.abs(window.orientation) === 90 ? 'portrait' : 'landscape'; 
+    var cl = document.body.className;
+    cl = cl.replace(/landscape|portrait/, orient);
+    document.body.className = cl;
+ ////<body class="portrait">
+  }
+</script> 
+</head>
+<body class="landscape" > -->
+
+
+<!-- portrait view 
+<script type="text/javascript">
+  window.addEventListener('load', setOrientation, false);
+  window.addEventListener('orientationchange', setOrientation, false);
+ function setOrientation() {
+    var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait'; 
+    var cl = document.body.className;
+    cl = cl.replace(/portrait|landscape/, orient);
+    document.body.className = cl;
+ ////add in body class <body class="portrait">
+ }
+</script> 
+</head>
+<body class="portrait" >-->
+<script type="text/javascript">
+  window.addEventListener('load', setOrientation, false);
+  window.addEventListener('orientationchange', setOrientation, false);
+ function setOrientation() {
+    var orient = Math.abs(window.orientation) === 90 ? 'landscape' : 'portrait'; 
+    var cl = document.body.className;
+    cl = cl.replace(/portrait|landscape/, orient);
+    document.body.className = cl;
+ ////add in body class <body class="portrait">
+ }
+</script> 
+</head>
+<body class="portrait" >
+
+<div id="header">
+</div>
+
+<div id="wrapper" align="center">
+	<div id="scroller" style="margin-left:40px;margin-right:40px">
+		<ul id="thelist" align="center">
+            <li><img src="images/book_mini_1.png" /></li>
+            <li><img src="images/book_mini_2.png" /></li>
+            <li><img src="images/book_mini_3.png" /></li>
+            <li><img src="images/book_mini_4.png" /></li>
+            <li><img src="images/book_mini_5.png" /></li>
+            <li><img src="images/book_mini_6.png" /></li>
+            <li><img src="images/book_mini_7.png" /></li>
+            <li><img src="images/book_mini_0.png" /></li>
+     	    <li><img src="images/book_mini_0.png" /></li>
+       	    <li><img src="images/book_mini_0.png" /></li>
+            <li><img src="images/index_ci_iphone.png"  style="position:absolute;opacity: 0.5; left:295px; top:-60px;"></li>
+            <li><img src="images/iphone_web_copyright.png"   style="position:absolute;opacity: 0.8; left:222px; top:906px;" /></li>
+         </ul>
+	</div>
+</div>
+
+<div id="footer">
+</div>
+
+</body>
+</html>
